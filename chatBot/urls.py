@@ -16,9 +16,10 @@ Including another URLconf
 from django import views
 from django.contrib import admin
 from django.urls import path
-from chat.views import index
+from chat.views import index,getBot
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
+    path('getBot', getBot, name='getBot'),
 ]
