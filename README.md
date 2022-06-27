@@ -1,4 +1,4 @@
-# ChatBot web application
+# ChatBot api
 
 ## Setup
 
@@ -27,4 +27,4 @@ Once `pip` has finished downloading the dependencies:
 ```sh
 (venv)$ python manage.py runserver
 ```
-And navigate to `http://127.0.0.1:8000/`.
+End point is in `http://127.0.0.1:8000/v1/api/messages`.
