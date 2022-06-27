@@ -1,28 +1,32 @@
-import json
 from time import gmtime, strftime
-from django.template import loader
-from django.http import HttpResponse, JsonResponse
-from django.shortcuts import render
+from django.http import JsonResponse
 from Bot import ChatBot as bot
+from chat.models import Message
+from chat.serializers import MessageSerializer
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework.parsers import JSONParser
 
-# Create your views here.
-#@csrf_protect
-def getBot(request):
-    if request.method == 'POST':
-        jsonData = json.loads(request.body.decode('utf-8'))
-        msg = jsonData["msg"]
-        res = bot.ChatBot.getBot().response(msg)
-        time = strftime("%Y-%m-%d %H:%M:%S", gmtime())
-        return JsonResponse({
-            "desc": "Success",
-            "ques": msg,
-            "res": res,
-            "time": time
-        })
-    else:
-        return JsonResponse({"desc": "Bad request"}, status=400)
-
-        
-def index(request):
-    template = loader.get_template('home.html')
-    return HttpResponse(template.render({}, request))
+@csrf_exempt
+def message_list(request):
+    if request.method == 'GET':
+        messages = Message.objects.all()
+        serializer = MessageSerializer(messages, many=True, context={'request': request})
+        return JsonResponse(serializer.data, safe=False)
+    elif request.method == 'POST':
+        print(request)
+        data = JSONParser().parse(request)
+        print(data)
+        serializer = MessageSerializer(data=data)
+        if serializer.is_valid():
+            msg = data["message"]
+            response = bot.ChatBot.getBot().response(msg)
+            time = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+            return JsonResponse({
+                "desc": "Success",
+                "ques": msg,
+                "response": response,
+                "time": time
+            },status=200)
+            #serializer.save()
+            #return JsonResponse(serializer.data, status=200)
+        return JsonResponse(serializer.errors, status=400)  
