@@ -1,37 +1,47 @@
 {"intents": [
         {"tag": "1",
-         "patterns": ["Hi","Is anyone there?", "Hello"],
-         "responses": ["Hi", "Hello", "Hi there, how can I help?"],
-         "context_set": ""
+            "patterns": ["Comment tu t’appelle?", "nom", "Dis-moi comment tu t'appelles ?", "Dites-moi comment vous vous appelez ?", "votre nom, s'il vous plaît ?","Quel est votre nom ?","Bonjour"],
+            "responses": [" Bonjour ,Je m’appelle Algorithme Chatbot "],
+            "context_set": ""
         },
         {"tag": "2",
-         "patterns": ["Who are you","What is you name","Do you have a name"],
-         "responses": ["Hi, I'm slack", "My name is slack", "I'm Slack"],
+            "patterns": ["Algorithme", "C'est quoi un algorithme", "algorithmique","ce quel algorithme ?","Qu'est-ce qu'un algorithme ?","définition d'algorithme"],
+            "responses": ["Un algorithme est une suite d’actions ou d’instructions qui doivent être exécutées dans un ordre bien déterminé pour résoudre un problème (ou réaliser un travail).", "Un algorithme est une suite finie et non ambiguë d’opérations ou d'instructions permettant de résoudre une classe de problèmes.","Un algorithme est une méthode générale pour résoudre un type de problèmes. Il est dit correct lorsque, pour chaque instance du problème,il se termine en produisant la bonne sortie, c'est-à-dire qu'il résout le problème posé"],
+            "context_set": ""
+        },
+        {"tag": "3",
+            "patterns": ["Notion de donnée ", "ce quoi une Notion de donnée ?", "Les données d'un Algorithmes ?", "les données"],
+            "responses": ["Les données sont des informations nécessaires au déroulement d’un algorithme.", "Les données sont des informations nécessaires au déroulement d’un algorithme. On distingue deux catégories : les constantes et les variables."],
+         "context_set": ""
+        },
+        {"tag": "4",
+            "patterns": ["constante", "ce quoi une constant","Constante ?","Les constantes "],
+            "responses": ["Une constante est une donnée fixe qui ne varie pas durant l’exécution d’un algorithme. Une constante est caractérisée par son nom et sa valeur (fixe)Donnée qui conserve toujours la même valeur ","Une constante est un objet dont l'état reste inchangé durant toute l'exécution d'un programme. On ne peut jamais modifier sa valeur et celle-ci doit donc être précisée lors de la définition de l'objet Syntaxe d'un Constante : Constante Nom _Constante = valeur ; Exemple : Constante Pi =3,14 ; Constante B = 6 ; Constante Mois ='Mars."],
          "context_set": ""
         },
         {"tag": "5",
-         "patterns": ["How is the weather today"],
-         "responses": ["It's sunny day"],
+            "patterns": ["ce quoi une variable ?", "Variable", "définition d’une variable"],
+            "responses": ["Une variable est un objet dont le contenu peut être modifié par une action", "Une variable est un objet dont le contenu peut être modifié par une action durant l’exécution d’un algorithme."],
          "context_set": ""
         },
         {"tag": "6",
-         "patterns": ["What events are available today"],
-         "responses": ["Live in concent will be at UOM JJ hall"],
+            "patterns": ["représenter un algorithme", "Comment représenter un algorithme ?","la structure d'un algorithme","structure"],
+            "responses": ["On peut représenter un algorithme à l’aide d’un pseudo-code ou d’un organigramme. Un algorithme écrit en pseudo-code est composé de trois partiessuivantes : L’en-tête, la partie déclarative et le corps."],
          "context_set": ""
         },
         {"tag": "7",
-         "patterns": ["How are you","What's up"],
-         "responses": ["I'm fine, Thanks for asking.","I'm doing well","I'm fine. And you ?"],
+            "patterns": ["affectation", "affectation"],
+            "responses": ["L’affectation est une opération qui consiste à attribuer une valeur à une variable. Elle est représentée par une flèche orientée à gauche --> "],
          "context_set": ""
         },
         {"tag": "8",
-         "patterns": ["Bye", "See you later", "Goodbye"],
-         "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."],
+            "patterns": ["affectation", "affectation"],
+            "responses": ["L’affectation est une opération qui consiste à attribuer une valeur à une variable. Elle est représentée par une flèche orientée à gauche --> "],
          "context_set": ""
         },
         {"tag": "9",
-         "patterns": ["Thank you"],
-         "responses": ["You are welcome"],
+            "patterns": ["affectation", "affectation"],
+            "responses": ["L’affectation est une opération qui consiste à attribuer une valeur à une variable. Elle est représentée par une flèche orientée à gauche --> "],
          "context_set": ""
         }
    ]

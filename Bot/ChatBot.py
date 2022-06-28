@@ -1,3 +1,4 @@
+from unittest import result
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
 
@@ -84,4 +85,4 @@ class ChatBot(object):
                                      userID]):
                             if show_details: print('tag:', i['tag'])
                             return random.choice(i['responses'])
-                return "I can't guess"
+                return "Oups, Please contact your teacher !"
