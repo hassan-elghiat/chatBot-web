@@ -11,7 +11,7 @@
         "Quel est votre nom ?",
         "Bonjour"
       ],
-      "responses": ["Bonjour :)", "Salut!!", "Salam"],
+      "responses": ["Salut, bienvenue sur notre plateforme Learn By Bot, dans cette discussion vous pouvez tout demander sur l'algorithme."],
       "context_set": ""
     },
     {
@@ -106,6 +106,54 @@
       "patterns": ["affectation", "affectation"],
       "responses": [
         "L'affectation est une opération qui consiste à attribuer une valeur à une variable. Elle est représentée par une flèche orientée à gauche --> "
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "10",
+      "patterns": ["Quelle sont les Types de base", "Variables"],
+      "responses": [
+        "Une variable de type booléen prend comme valeur VRAI ou FAUX. /n Une variable de type entier peut prendre comme valeur l'ensemble des nombres entiers signés. Les opérations associées sont les opérations usuelles +,-,*,/. /n Une variable de type réel peut prendre comme valeur l'ensemble des nombres réels. Les opérations associées sont les opérations usuelles +,-,*,/. /n Une variable de type car peut prendre comme valeur l'ensemble des caractères imprimables. On notera les valeurs entre guillemets. On considère souvent que les caractères sont ordonnés dans l'ordre alphabétique."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "11",
+      "patterns": ["Structures de contrôle", "Si", "Sinon"],
+      "responses": [
+        "si ExpressionBooléenne alors /n BlocInstructions1 /n sinon /n BlocInstructions2 /n finsi /n"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "12",
+      "patterns": ["Trie", "Algorithmes de tri", "Quelle sont les type d'algorithme de tri ?"],
+      "responses": [
+        "Il existe plusieurs algorithmes de tri : Tri par sélection (ou par extraction), Tri par insertion, Tri à bulles (ou par propagation), Tri rapide (ou Quick Sort), Tri fusion (ou Merge Sort), Tri par tas."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "13",
+      "patterns": ["Tri par sélection (ou par extraction)"],
+      "responses": [
+        "VARIABLE /n t : tableau d'entiers /n i : nombre entier /n min : nombre entier /n j : nombre entier /n DEBUT /n i←1 /n tant que i<longueur(t):   //boucle 1 /n j←i+1 /n min←i /n tant que j<=longueur(t):   //boucle 2 /n si t[j]<t[min]: /n min←j /n fin si /n j←j+1 /n fin tant que /n si min≠i : /n échanger t[i] et t[min] /n fin si /n i←i+1 /n fin tant que /n FIN"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "14",
+      "patterns": ["Tri par insertion"],
+      "responses": [
+        "VARIABLE /n t : tableau d'entiers /n i : nombre entier /n j : nombre entier /n k : nombre entier /n DEBUT /n j←2 /n tant que j<=longueur(t):   //boucle 1 /n i←j-1 /n k←t[j] /n tant que i>0 et que t[i]>k:   //boucle 2 /n t[i+1]←t[i] /n i←i-1 /n fin tant que /n t[i+1]←k /n j←j+1 /n fin tant que /n FIN"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "15",
+      "patterns": ["Tri à bulles (ou par propagation)"],
+      "responses": [
+        "procedure tri_bulles(T) /n N ← taille de T /n pour i de N − 1 à 1 faire /n pour j de 0 à i − 1 faire /n si T[j] > T[j + 1] alors /n échanger T[j] et T[j + 1] /n fin si /n fin pour /n fin pour /n fin procedure"
       ],
       "context_set": ""
     }

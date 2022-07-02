@@ -85,4 +85,4 @@ class ChatBot(object):
                                      userID]):
                             if show_details: print('tag:', i['tag'])
                             return random.choice(i['responses'])
-                return "Oups, Please contact your teacher !"
+                return "Oups, veuillez contacter votre professeur !"
