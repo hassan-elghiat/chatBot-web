@@ -1,2 +1,2 @@
-model_checkpoint_path: "d:/crmef-sm/ChatBot/chatBot-web/Bot/model.tflearn"
-all_model_checkpoint_paths: "d:/crmef-sm/ChatBot/chatBot-web/Bot/model.tflearn"
+model_checkpoint_path: "D:/crmef-sm/ChatBot/chatBot-web/bot/model.tflearn"
+all_model_checkpoint_paths: "D:/crmef-sm/ChatBot/chatBot-web/bot/model.tflearn"
